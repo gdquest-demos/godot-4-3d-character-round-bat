@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://tyjgdu65yj3m"]
 
-[ext_resource type="PackedScene" uid="uid://h2we7rb772hy" path="res://round_bat/model/bat.glb" id="1_tt0gg"]
-[ext_resource type="Script" uid="uid://d3ton6yy514il" path="res://round_bat/round_bat_skin.gd" id="1_vbemd"]
-[ext_resource type="AnimationLibrary" uid="uid://c1irgai81674w" path="res://round_bat/model/custom_animations/custom_lib.res" id="3_4nlip"]
+[ext_resource type="PackedScene" uid="uid://h2we7rb772hy" path="res://addons/gdquest_round_bat/model/bat.glb" id="1_tt0gg"]
+[ext_resource type="Script" uid="uid://d3ton6yy514il" path="res://addons/gdquest_round_bat/round_bat_skin.gd" id="1_vbemd"]
+[ext_resource type="AnimationLibrary" uid="uid://c1irgai81674w" path="res://addons/gdquest_round_bat/model/custom/custom_lib.res" id="2_er7fn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0xry"]
 render_priority = 1
@@ -142,54 +142,53 @@ _data = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_448ki"]
-animation = &"custom_lib/hurt"
+animation = &"custom/hurt"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_41mbd"]
-sync = true
 mix_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v8u50"]
 animation = &"Idle"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_omnlg"]
-graph_offset = Vector2(-477.01816, 31.018164)
+graph_offset = Vector2(-336.1, 81.1)
 nodes/output/position = Vector2(280, 160)
 nodes/Hurt/node = SubResource("AnimationNodeAnimation_448ki")
-nodes/Hurt/position = Vector2(-176, 320)
+nodes/Hurt/position = Vector2(-151, 282.818)
 nodes/HurtShot/node = SubResource("AnimationNodeOneShot_41mbd")
 nodes/HurtShot/position = Vector2(60, 140)
 nodes/Idle/node = SubResource("AnimationNodeAnimation_v8u50")
-nodes/Idle/position = Vector2(-176, 128)
+nodes/Idle/position = Vector2(-160, 160)
 node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"Idle", &"HurtShot", 1, &"Hurt"]
 
-[node name="RoundBatSkin" type="Node3D" unique_id=1231273033]
+[node name="RoundBatSkin" type="Node3D" unique_id=1048116174]
 script = ExtResource("1_vbemd")
 
-[node name="RoundBat" parent="." unique_id=1964773584 instance=ExtResource("1_tt0gg")]
+[node name="RoundBat" parent="." unique_id=328778515 instance=ExtResource("1_tt0gg")]
 
-[node name="Skeleton3D" parent="RoundBat/Armature" parent_id_path=PackedInt32Array(1964773584, 403597101) index="0" unique_id=970525923]
-bones/0/position = Vector3(0, -0.0068519013, 0)
-bones/1/rotation = Quaternion(-0.026416803, 0.18624015, -0.6870863, 0.7018042)
-bones/2/rotation = Quaternion(-0.051871248, -0.014854209, 0.2762969, 0.9595565)
-bones/3/rotation = Quaternion(0.045055155, 0.06126867, 0.26633984, 0.96087426)
-bones/4/rotation = Quaternion(-0.026416803, -0.18624015, 0.6870863, 0.7018042)
-bones/5/rotation = Quaternion(-0.051871248, 0.014854209, -0.2762969, 0.9595565)
-bones/6/rotation = Quaternion(0.045055155, -0.06126867, -0.26633984, 0.96087426)
+[node name="Skeleton3D" parent="RoundBat/Armature" parent_id_path=PackedInt32Array(328778515, 1531492047) index="0" unique_id=579558784]
+bones/0/position = Vector3(0, 0.015947895, 0)
+bones/1/rotation = Quaternion(0.09103182, 0.071445286, -0.6774616, 0.7263984)
+bones/2/rotation = Quaternion(0.11736805, 0.04391285, 0.3458298, 0.9298915)
+bones/3/rotation = Quaternion(0.16541675, 0.10974122, 0.33050236, 0.922693)
+bones/4/rotation = Quaternion(0.09103182, -0.071445286, 0.6774616, 0.7263984)
+bones/5/rotation = Quaternion(0.11736805, -0.04391285, -0.3458298, 0.9298915)
+bones/6/rotation = Quaternion(0.16541675, -0.10974122, -0.33050236, 0.922693)
 bones/7/position = Vector3(0.130992, -0.227392, -0.087851495)
 bones/7/rotation = Quaternion(0.26196814, 0.08345515, 0.26575115, 0.92400455)
-bones/8/rotation = Quaternion(3.8423348e-08, 0.6917696, 0.7221184, 1.6902307e-08)
+bones/8/rotation = Quaternion(3.6970714e-08, 0.6990829, 0.7150406, 2.2559998e-08)
 bones/10/position = Vector3(-0.130992, -0.227392, -0.087851495)
 bones/10/rotation = Quaternion(0.26196814, -0.08345515, -0.26575115, 0.92400455)
-bones/11/rotation = Quaternion(2.5133373e-08, 0.6917696, 0.7221184, 3.6303877e-08)
+bones/11/rotation = Quaternion(2.2447123e-08, 0.6990829, 0.7150406, 3.5412786e-08)
 
-[node name="Bat" parent="RoundBat/Armature/Skeleton3D" index="0" unique_id=945330369]
+[node name="Bat" parent="RoundBat/Armature/Skeleton3D" index="0" unique_id=1151989321]
 material_overlay = SubResource("StandardMaterial3D_u0xry")
 
-[node name="AnimationPlayer" parent="RoundBat" index="1" unique_id=381696406]
+[node name="AnimationPlayer" parent="RoundBat" index="1" unique_id=77987593]
 libraries/ = SubResource("AnimationLibrary_sqho5")
-libraries/custom_lib = ExtResource("3_4nlip")
+libraries/custom = ExtResource("2_er7fn")
 
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1842290828]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1373746108]
 unique_name_in_owner = true
 root_node = NodePath("%AnimationTree/../RoundBat")
 tree_root = SubResource("AnimationNodeBlendTree_omnlg")

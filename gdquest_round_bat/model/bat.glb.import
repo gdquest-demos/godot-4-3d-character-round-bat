@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://h2we7rb772hy"
-path="res://.godot/imported/bat.glb-d17bd67fcfdf51aff10b69b8e5fde615.scn"
+path="res://.godot/imported/bat.glb-dd8d3a7e8fe4d48ecb4667a82b1ec63c.scn"
 
 [deps]
 
-source_file="res://round_bat/model/bat.glb"
-dest_files=["res://.godot/imported/bat.glb-d17bd67fcfdf51aff10b69b8e5fde615.scn"]
+source_file="res://addons/gdquest_round_bat/model/bat.glb"
+dest_files=["res://.godot/imported/bat.glb-dd8d3a7e8fe4d48ecb4667a82b1ec63c.scn"]
 
 [params]
 
